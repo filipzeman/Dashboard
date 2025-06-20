@@ -1,0 +1,64 @@
+.add-button {
+  margin-top: 30px;
+  padding: 10px 16px;
+  margin-bottom: 30px;
+  font-size: 1rem;
+  background-color: rgb(143, 100, 243);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-button:hover {
+  background-color: rgb(103, 43, 243);
+}
+
+.home-link {
+  display: block;
+  text-decoration: none;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 110px;
+  background: #2c2c3c;
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+  color: white;
+}
+
+.sidebar span {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.sidebar footer {
+  padding-bottom: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar nav a {
+  color: #ccc;
+  padding: 10px 0;
+  text-decoration: none;
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover {
+  color: white;
+  font-weight: bold;
+}
