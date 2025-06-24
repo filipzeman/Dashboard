@@ -34,7 +34,10 @@ export default function Videos() {
 
   return (
     <div className="videos-page">
-      <h2 className="videos-heading">🎬 Videos</h2>
+      <header className="page-header">
+        <h1>🎬 Videos</h1>
+      </header>
+
       <div className="videos-input">
         <input
           className="videos-url-input"

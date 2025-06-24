@@ -37,7 +37,7 @@ const Sidebar = ({ onAddClick }) => {
         </nav>
       </section>
       <footer>
-        <span>Version 0.2</span>
+        <span>Version 0.4</span>
       </footer>
     </div>
   );

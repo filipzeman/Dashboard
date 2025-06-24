@@ -8,6 +8,8 @@ import AddEventModal from "../components/AddEventModal";
 import Videos from "./Videos";
 import Notion from "./Notion";
 import Dashboard from "./Dashboard";
+import ProtectedRoute from "../ProtectedRoute";
+import LoginPage from "./LoginPage";
 
 function App() {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -65,22 +67,68 @@ function App() {
         <Sidebar onAddClick={openAddModal} />
         <div style={{ marginLeft: "220px", padding: "20px", flex: 1 }}>
           <Routes>
-            <Route path="/" element={<Dashboard />} />
+            <Route
+              path="/"
+              element={
+                <ProtectedRoute>
+                  <Dashboard />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/login"
+              element={
+                <ProtectedRoute>
+                  <LoginPage />
+                </ProtectedRoute>
+              }
+            />
             <Route
               path="/events"
               element={
-                <Events
-                  events={events}
-                  namedays={namedays}
-                  setEvents={setEvents}
-                  onEditClick={openEditModal}
-                />
+                <ProtectedRoute>
+                  <Events
+                    events={events}
+                    namedays={namedays}
+                    setEvents={setEvents}
+                    onEditClick={openEditModal}
+                  />
+                </ProtectedRoute>
               }
             />
-            <Route path="/videos" element={<Videos />} />
-            <Route path="/notion" element={<Notion />} />
-            <Route path="/settings" element={<Settings />} />
-            <Route path="/about" element={<About />} />
+            <Route
+              path="/videos"
+              element={
+                <ProtectedRoute>
+                  <Videos />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/notion"
+              element={
+                <ProtectedRoute>
+                  <Notion />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/settings"
+              element={
+                <ProtectedRoute>
+                  <Settings />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/about"
+              element={
+                <ProtectedRoute>
+                  <About />
+                </ProtectedRoute>
+              }
+            />
           </Routes>
         </div>
         {isModalOpen && (

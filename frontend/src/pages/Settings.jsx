@@ -1,10 +1,11 @@
-import React from 'react';
+import React from "react";
 
 function Settings() {
   return (
     <div>
-      <h1>⚙️ Settings</h1>
-      <p>Placeholder for configurable settings like reminders or date format.</p>
+      <header className="page-header">
+        <h1>⚙️ Settings</h1>
+      </header>
     </div>
   );
 }

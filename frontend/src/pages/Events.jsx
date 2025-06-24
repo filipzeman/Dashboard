@@ -11,7 +11,7 @@ function Events({ events, namedays, onEditClick }) {
 
   return (
     <div className="dashboard-container">
-      <header className="dashboard-header">
+      <header className="page-header">
         <h1>📅 Dashboard</h1>
         <p>
           Today is <strong>{today}</strong> | <strong>💐 {namedays}</strong>
