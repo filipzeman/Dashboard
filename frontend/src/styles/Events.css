@@ -20,6 +20,12 @@ body {
   padding: 30px;
 }
 
+.dashboard-container .edit-button {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .dashboard-header {
   /* text-align: center; */
   border-bottom: 2px solid #2c2c3c;

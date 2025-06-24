@@ -8,29 +8,36 @@ const Sidebar = ({ onAddClick }) => {
   return (
     <div className="sidebar">
       <section>
-        <Link className="home-link  " to="/">
+        {/* <Link className="home-link  " to="/">
           <h2>🎂</h2>
-        </Link>
+        </Link> */}
         <button className="add-button" onClick={onAddClick}>
           ➕
         </button>
         <nav>
           <Link className={pathname === "/" ? "active" : ""} to="/">
-            Dashboard
+            🦊 Dashboard
+          </Link>
+          <Link to="/events">📅 Events</Link>
+          <Link to="/videos" className="...">
+            🎬 Videos
+          </Link>
+          <Link to="/notion" className="...">
+            🎓 Notion
           </Link>
           <Link
             className={pathname === "/settings" ? "active" : ""}
             to="/settings"
           >
-            Settings
+            ⚙️ Settings
           </Link>
           <Link className={pathname === "/about" ? "active" : ""} to="/about">
-            About
+            ⚡️ About
           </Link>
         </nav>
       </section>
       <footer>
-        <span>Version 0.1</span>
+        <span>Version 0.2</span>
       </footer>
     </div>
   );

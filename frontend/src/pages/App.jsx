@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
-import Dashboard from "./Dashboard";
+import Events from "./Events";
 import Settings from "./Settings";
 import About from "./About";
 import AddEventModal from "../components/AddEventModal";
-import sortData from "../utilities/sortData.js";
+import Videos from "./Videos";
+import Notion from "./Notion";
+import Dashboard from "./Dashboard";
 
 function App() {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -63,10 +65,11 @@ function App() {
         <Sidebar onAddClick={openAddModal} />
         <div style={{ marginLeft: "220px", padding: "20px", flex: 1 }}>
           <Routes>
+            <Route path="/" element={<Dashboard />} />
             <Route
-              path="/"
+              path="/events"
               element={
-                <Dashboard
+                <Events
                   events={events}
                   namedays={namedays}
                   setEvents={setEvents}
@@ -74,6 +77,8 @@ function App() {
                 />
               }
             />
+            <Route path="/videos" element={<Videos />} />
+            <Route path="/notion" element={<Notion />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/about" element={<About />} />
           </Routes>
